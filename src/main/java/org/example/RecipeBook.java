@@ -29,16 +29,6 @@ public class RecipeBook {
         return result;
     }
 
-    public boolean updateRecipe(String name, Recipe updatedRecipe) {
-        for (int i = 0; i < recipes.size(); i++) {
-            if (recipes.get(i).getName().equalsIgnoreCase(name)) {
-                recipes.set(i, updatedRecipe);
-                return true;
-            }
-        }
-        return false;
-    }
-
     public List<Recipe> findRecipesByIngredientCount(int count) {
         List<Recipe> result = new ArrayList<>();
         for (Recipe recipe : recipes) {
